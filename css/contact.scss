@@ -1,0 +1,597 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+button  {
+  appearance: none;
+  font-family: 'Montserrat', sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img,svg {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover {
+  opacity: .7;
+  transition: .3s;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+.section-wrapper {
+  padding: 60px 0;
+}
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-wrapper {
+  width: calc(100% - 8vw);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: 3.2rem;
+  line-height: 1.21875;
+  letter-spacing: 0.068em;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.link-btn {
+  color: #fff;
+  background-color: #000;
+  width: 160px;
+  line-height: 36px;
+  font-size: 1.2rem;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 27px;
+  font-family: 'montserrat';
+  letter-spacing: 0.015;
+}
+.grey-bg {
+  background-color: #f2f2f2;
+}
+
+// header
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 30px 4%;
+  z-index: 3;
+  overflow: hidden;
+}
+.site-title {
+  width: 260px;
+}
+.site-title.black svg path {
+  fill: #333;
+  transition: fill .3s;
+}
+.header-nav {
+  font-weight: bold;
+  font-size: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 36.1vw;
+  text-align: center;
+  padding: 120px 0 0;
+  background-color: rgba(34,34,34,.95);
+  z-index: 10;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform .3s, opacity .3s;
+}
+.nav-item {
+  margin-bottom: 30px;
+}
+.nav-item:first-of-type {
+  margin-bottom: 40px;
+}
+.nav-item:last-of-type {
+  margin-bottom: 0;
+}
+.header-nav a {
+  color: #fff;
+}
+.burger-btn {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.bar {
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 22px;
+  border-radius: 1px;
+}
+.bar_top {
+  transform: translateY(-3px);
+  transition: transform .3s;
+}
+.bar_bottom {
+  transform: translateY(3px);
+  transition: transform .3s;
+}
+.menu {
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 7px;
+  letter-spacing: 0.005em;
+}
+.bar.cross.bar_top {
+  transform: translateY(2px)rotate(30deg);
+  transition: transform .3s;
+}
+.bar.cross.bar_mid {
+  opacity: 0;
+  transition: opacity .3s;
+}
+.bar.cross.bar_bottom {
+  transform: translateY(-2px)rotate(-30deg);
+  transition: transform .3s;
+}
+body.noscroll {
+  overflow: hidden;
+}
+.header-nav.open {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform .3s, opacity .3s;
+}
+.burger-musk {
+display: none;
+height: 100vh;
+width: 100vw;
+position: fixed;
+top: 0;
+left: 0;
+background-color: rgba(0,0,0,.5);
+z-index: 1;
+}
+.burger-btn.black .bar {
+  background-color: #333;
+  transition: background-color .3s;
+}
+.burger-btn.black .menu {
+  color: #333;
+  transition: color .3s;
+}
+
+// fv 
+
+.fv {
+  width: 100%;
+  height: 50.11vh;
+  min-height: 450px;
+  position: relative;
+  z-index: -2;
+}
+.fv::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #222;
+  width: 54.1666%;
+  height: 50.11vh;
+  min-height: 450px;
+  z-index: -1;
+}
+.black-mask::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.34);
+  z-index: 1;
+}
+.kv-wrapper {
+  height: 85.8%;
+  width: 76.38%;
+  background-image: url(../images/heading-img_contact.jpg);
+  background-size: cover;
+  background-position: center 0;
+  position: relative;
+}
+.page-title {
+  font-size: 7.2rem;
+  font-weight: bold;
+  position: absolute;
+  color: #fff;
+  top: 40.31%;
+  right: 0;
+  transform: translate(47.97%,0);
+  z-index: 3;
+  letter-spacing: 0.063em;
+  line-height: 1.222;
+  text-transform: uppercase;
+}
+.page-title span {
+  margin-top: 5px;
+  font-size: 2rem;
+  display: block;
+  line-height: 1.15;
+  letter-spacing: 0.005em;
+  font-weight: normal;
+}
+
+.lines {
+  line-height: 2;
+}
+
+
+
+.footer {
+  line-height: 50px;
+  background-color: #525252;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 0.015em;
+  font-weight: normal;
+}
+.contact-wrapper {
+  padding: 117px 0;
+}
+.contact-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.contact-lead {
+  margin-bottom: 59px;
+  line-height: 1.5;
+}
+input,textarea {
+  resize: none;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.form-item {
+  margin-bottom: 39px;
+}
+.inquiry-type-list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-top: 6px;
+  label {
+    margin-left: 5px;
+  }
+}
+.inquiry-type-item {
+  margin-right: 51px;
+}
+.radio-btn {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #333;
+  border-radius: 50%;
+  vertical-align: -4px;
+}
+.radio-btn:checked {
+  background-color: #333;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 1px #333;
+}
+.radio-btn:hover,.submit-btn {
+  cursor: pointer;
+}
+.text-box {
+  border: 1px solid #333;
+  color: #333;
+  padding: 10px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.textarea {
+  border: 1px solid #333;
+  padding: 10px;
+  color: #333;
+  box-sizing: border-box;
+}
+.required {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0 5px;
+  margin-left: 6px;
+}
+.form-item-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.onamae {
+  margin-bottom: 41px;
+}
+.mail {
+  margin-bottom: 41px;
+}
+.otoiawase {
+  margin-bottom: 36px;
+}
+.privacy-policy-title {
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.privacy-policy-detail {
+  padding: 7px 9px;
+  height: 252px;
+  border: 1px solid #333;
+  overflow-y: scroll;
+  margin-bottom: 41px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.004em;
+}
+.confirm {
+  text-align: center;
+  label {
+    font-size: 1.6rem;
+    letter-spacing: 0.004em;
+  }
+}
+.checkbox {
+  border: 1px solid #333;
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px;
+}
+.checkbox:checked {
+  background-image: url(../images/chek.svg);
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.submit-btn {
+  color: #fff;
+  background-color: #000;
+  width: 160px;
+  line-height: 36px;
+  font-size: 1.4rem;
+  letter-spacing: 0.015em;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin: 40px auto 0;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+  .header {
+    padding: 25px 30px;
+  }
+  .section-wrapper {
+    padding: 40px 0;
+  }
+  .site-title {
+    width: 189px;
+  }
+  .header-nav {
+    width: 67.7vw;
+  }
+  .copy-wrapper {
+    right: -15%;
+    transform: translate(0,-50%);
+  }
+  .fv {
+    height: 60vh;
+  }
+  .fv::after {
+    width: 52.86%;
+    height: 60vh;
+  }
+  .kv-wrapper {
+    height: 86%;
+    width: 75.26%;
+    background: url(../images/contacttablettop@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  .page-title {
+    font-size: 5.2rem;
+    top: 24.95%;
+    right: 0;
+    transform: translate(48.95%,0);
+    line-height: 1.211;
+  }
+  .page-title span {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    line-height: 1.125;
+  }
+ 
+
+  .contact-content {
+    width: 440px;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .contact-img-wrapper {
+    width: 520px;
+    max-width: 100%;
+  }
+  .section-wrapper:last-of-type {
+    padding-bottom: 80px;
+  }
+  .content-wrapper.relative {
+    padding-top: 120px;
+  }
+  .ceo-img-wrapper {
+    width: 100%;
+    max-width: 320px;
+  }
+  .contact-wrapper {
+    padding: 135px 0 197px;
+  }
+  .inquiry-type-list {
+    align-items: flex-start;
+    padding-left: 10px;
+    label {
+      margin-left: 9px;
+    }
+  }
+  .inquiry-type-item {
+    margin-bottom: 10px;
+    margin-right: 53px;
+  }
+  .contact-lead {
+    font-size: 1.6rem;
+    margin-bottom: -6px;
+  }
+  .contact-inner {
+    max-width: 668px;
+  }
+  .form-item-title {
+    font-size: 1.6rem;
+    margin-bottom: 7px;
+  }
+  .form-item {
+    margin-bottom: 21px;
+  }
+  .text-box {
+    padding: 14px;
+  }
+  .kaisya,
+  .onamae,
+  .mail,
+  .telephone {
+    margin-bottom: 36px;
+  }
+  .otoiawase {
+    margin-bottom: 16px;
+  }
+  .privacy-policy-detail {
+    height:222px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 17px 15px;
+  }
+  .fv {
+    height: 54.72vh;
+    min-height: 100px;
+  }
+  .fv::after {
+    width: 52.8%;
+    height: 54.72vh;
+    min-height: 100px;
+  }
+  .kv-wrapper {
+    height: 73.97%;
+    width: 76.53%;
+    background: url(../images/contactsptop@2x.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+ .page-title {
+   font-size: 5.2rem;
+   top: 47.77%;
+   transform: translate(23.42%,0);
+   line-height: 1.211;
+   letter-spacing: 0.063em;
+   width: 289px;
+   font-weight: 800;
+ }
+ .page-title span {
+   margin-top: 10px;
+   font-size: 1.6rem;
+   line-height: 1.125;
+   letter-spacing: 0;
+   text-align: right;
+ }
+ .contact-wrapper {
+   padding: 77px 0;
+ }
+ .contact-inner {
+   margin: 0 15px;
+   p {
+     font-size: 1.4rem;
+     line-height: 1.714;
+   }
+ }
+ .contact-lead {
+   margin-bottom: 50px;
+ }
+ .inquiry-type-list {
+   flex-direction: column;
+ }
+ .inquiry-type-item {
+   margin-bottom: 1.4rem;
+ }
+ .textarea {
+   padding: 14px;
+ }
+ .otoiawase {
+   margin-bottom: 31px;
+ }
+ .contact-inner .privacy-policy-title {
+   font-size: 1.6rem;
+   letter-spacing: 0.004em;
+   margin-bottom: 6px;
+ }
+ .privacy-policy-detail {
+   height: 227px;
+   margin-bottom: 35px;
+ }
+ .checkbox {
+   margin-right: 18px;
+ }
+ .confirm label {
+   font-size: 1.4rem;
+   line-height: 1.714;
+   text-align-last: left;
+ }
+ .confirm {
+   display: flex;
+   input,
+   label {
+     display: block;
+   }
+ }
+}
